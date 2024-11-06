@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 
 ### Taken from UCSD DSC 40A Homework 4 ###
+### http://datahub.ucsd.edu/user-redirect/git-sync?repo=https://github.com/dsc-courses/dsc40a-2024-fa&subPath=homeworks/hw04/hw04-code.ipynb ###
 def solve_normal_equations(X, y):
     '''Returns the optimal parameter vector, w*, given a design matrix X and observation vector y.'''
     return np.linalg.solve(X.T @ X, X.T @ y)
@@ -22,6 +23,7 @@ def mean_squared_error(X, y, w):
     '''Returns the mean squared error of the predictions Xw and observations y.'''
     return np.mean((y - X @ w) ** 2)
 
+### Loading in train and testing data ###
 train = pd.read_csv('/Users/Leander/Desktop/Projects/MLB_Multi_Linear_Regression/train.csv')
 test = pd.read_csv('/Users/Leander/Desktop/Projects/MLB_Multi_Linear_Regression/test.csv')
 
