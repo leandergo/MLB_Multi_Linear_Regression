@@ -49,14 +49,15 @@ year = 2014
 # Split the DataFrame into two parts based on the threshold
 train = df[df['yearID'] < year].reset_index(drop=True)
 test = df[df['yearID'] >= year].reset_index(drop=True)
-### Some EDA to determine features I want to use
-# salary_bump = train['salary_bump']
-# for column in  ['yearID']:
+## Some EDA to determine features I want to use
+salary_bump = train['salary_bump']
+# for column in  ['salary']:
 #     random_sample = sample(range(len(train)), 1000)
 #     plt.scatter(train.iloc[random_sample][column], salary_bump[random_sample])
 #     plt.xlabel(column)
 #     plt.ylabel('Salary Bump')
 #     plt.show()
 
-train.to_csv('/Users/Leander/Desktop/Projects/mlb_multi_linear_regressiong/train.csv', index=False)
-test.to_csv('/Users/Leander/Desktop/Projects/mlb_multi_linear_regression/test.csv', index=False)
+# train.to_csv('/Users/Leander/Desktop/Projects/mlb_multi_linear_regressiong/train.csv', index=False)
+# test.to_csv('/Users/Leander/Desktop/Projects/mlb_multi_linear_regression/test.csv', index=False)
+print(train['yearID'].min())

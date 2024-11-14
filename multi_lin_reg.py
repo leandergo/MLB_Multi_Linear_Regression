@@ -47,3 +47,4 @@ y_test = test['salary_bump']
 
 print(f"Training loss: {mean_squared_error(X_train, y_train, w_star)}")
 print(f"Test loss: {mean_squared_error(X_test, y_test, w_star)}")
+print(f"Optimal parameters: {w_star}")
